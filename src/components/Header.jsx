@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/chef-claude-icon.png";
+import logo from "../assets/chef-turbo-icon.png";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +25,7 @@ function Header() {
   return (
     <header>
       <img src={logo} alt="Logo" />
-      <h1>Chef Claude</h1>
+      <h1>Chef Turbo</h1>
       <button onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
         {darkMode ? "🌞" : "🌛"}
       </button>

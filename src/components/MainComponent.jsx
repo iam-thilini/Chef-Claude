@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IngredientList from "./IngredientList";
-import { getRecipeFromClaude } from "../ai";
-import ClaudeRecipe from "./ClaudeRecipe";
+import { getRecipeFromTurbo } from "../ai";
+import TurboRecipe from "./TurboRecipe";
 
 function MainComponent() {
   // State to store the list of ingredients
@@ -11,7 +11,7 @@ function MainComponent() {
 
   // Function to fetch the recipe based on the list of ingredients
   async function getRecipe() {
-    const recipeMarkdown = await getRecipeFromClaude(ingredients);
+    const recipeMarkdown = await getRecipeFromTurbo(ingredients);
     setRecipe(recipeMarkdown); // Update the recipe state
   }
 
@@ -55,7 +55,7 @@ function MainComponent() {
       )}
 
       {/* Render ClaudeRecipe component only if a recipe is available */}
-      {recipe && <ClaudeRecipe recipe={recipe} />}
+      {recipe && <TurboRecipe recipe={recipe} />}
     </main>
   );
 }

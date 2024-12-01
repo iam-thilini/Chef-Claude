@@ -9,7 +9,7 @@ easier to render to a web page
 
 const apiKey = import.meta.env.VITE_GPT_ACCESS_TOKEN;
 
-export async function getRecipeFromClaude(ingredientsArr) {
+export async function getRecipeFromTurbo(ingredientsArr) {
   const ingredientsString = ingredientsArr.join(", ");
   try {
     const response = await axios.post(
